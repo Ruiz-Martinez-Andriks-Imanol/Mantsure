@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;  
+    padding: 0;
+    box-sizing: inherit;
+}
+
+Body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #ffffff;
+}
+.header label {
+    display: none;
+    cursor: pointer;
+}
+
+.header label img {
+    width: 45px;
+    height: 35px;
+    border: 2px solid #000; /* Agregar borde negro al icono */
+    background-color: #000;
+    border-radius: 5px; /* Opcional: agregar esquinas redondeadas al borde */
+}
+
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #918282;
+    font-weight: 700;
+}
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.navigation ul{
+    list-style: none;
+    background-color: #ffffff;
+    z-index: 1001;
+}
+
+.header .navigation ul li{
+    float: left;
+    position: relative;
+}
+.header .navigation ul li a{
+    font-size: 18px ;
+    color: #110e0e;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover{
+    color: #fff; /* Cambia el color del texto a blanco */
+    background-color: #4e1a70;
+}
+
+
+.header .navigation ul li ul{
+    position:absolute;
+    right:0;
+    width: 200px;
+    background-color: #fff; /* Color de fondo sólido */
+    z-index: 1001; /* Asegura que el menú desplegable esté por encima del contenido */
+    display:none;
+    border-radius: 10px; /* Redondea los bordes del menú desplegable */
+    
+}
+.header .navigation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li{
+    width: 100px;
+}
+
+.header .navigation ul li:hover > ul {
+    display:initial;
+}
+.header .navigation ul li ul li span {
+    float: right;
+    color: #bdb3b3;
+    background-color: #c43348;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+img{
+    width: 45px;
+    height: 35px;
+}
+
+.nosotros-container {
+    max-width: 80%;
+    margin: 120px auto 20px; /* Agrega un margen superior de 60px */
+    padding: 20px;
+    border: 2px solid #ccc; /* Borde */
+    border-radius: 20px; /* Borde redondeado */
+    background-color: #fff; /* Fondo blanco */
+}
+
+#nosotros {
+    margin-top: -80px; /* Ajusta este valor según la altura de tu encabezado */
+    padding-top: 80px; /* Asegura que el contenido no quede oculto detrás del encabezado */
+}
+
+.nosotros {
+    text-align: center;
+}
+
+.nosotros h2 {
+    font-size: 24px;
+    color: #ed3c57; /* Color de resaltado */
+    margin-bottom: 10px;
+}
+
+/* Estilos para Misión, Visión y Valores */
+.mision-vision-valores ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.mision-vision-valores ul li {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.mision-vision-valores ul li.mision {
+    background-color: rgba(255, 115, 0, 0.918); /* Fondo naranja para Misión */
+}
+
+.mision-vision-valores ul li.vision {
+    background-color: #0077cc; /* Fondo azul para Visión */
+}
+
+.mision-vision-valores ul li.valores {
+    background-color: #867a7a; /* Fondo gris para Valores */
+}
+
+.mision-vision-valores ul li h3 {
+    margin-bottom: 10px;
+}
+
+.mision-vision-valores ul li.valores ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px; /* Espacio entre los valores */
+}
+
+.mision-vision-valores ul li.valores ul li {
+    margin-bottom: 5px;
+    padding: 5px; /* Añadir un poco de espacio entre los valores */
+    border: none; /* Eliminar el borde */
+    text-align: left; /* Alinear el texto a la izquierda */
+    
+}
+
+.valores ul li {
+    font-size: 18px; /* Tamaño de fuente más grande */
+}
+
+.estructura-container {
+    max-width: 80%;
+    margin: 60px auto 20px; /* Ajusta los márgenes según sea necesario */
+    padding: 20px;
+    border: 2px solid #ccc; /* Borde */
+    border-radius: 20px; /* Borde redondeado */
+    background-color: #fff; /* Fondo blanco */
+    color: #fff;
+}
+
+#estructura{
+    margin-top: -80px; /* Ajusta este valor según la altura de tu encabezado */
+    padding-top: 80px; /* Asegura que el contenido no quede oculto detrás del encabezado */
+}
+
+.estructura ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /*Coloca las secciones en un mismo renglón */
+}
+
+.estructura h2{
+    font-size: 24px;
+    color: #ed3c57; /* Color de resaltado */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.estructura .contenido {
+    display: flex; /* Coloca los contenidos en un mismo renglón */
+    justify-content: space-around; /* Distribuye uniformemente los contenidos */
+    padding-top: 20px; /* Espacio entre las secciones y los contenidos */
+}
+
+.estructura .contenido > div {
+    flex: 1; /* Para que los contenidos ocupen el mismo espacio horizontalmente */
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0 10px; /* Espacio entre los contenidos */
+}
+
+.estructura .contenido h3 {
+    margin-top: 0; /* Elimina el margen superior de los títulos */
+    text-align: center; /* Centra los títulos */
+}
+
+.cobertura-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabasco {
+    background-color: #e4a41a; /* Color para Tabasco */
+}
+
+.veracruz {
+    background-color: #215bda; /* Color para Veracruz */
+}
+
+.chiapas {
+    background-color: #909096; /* Color para Chiapas */
+}
+
+.campeche {
+    background-color: #33a1ff; /* Color para Campeche */
+}
+
+.services {
+    background-color: #ffffffe1;
+    color: #ed3c57;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.service {
+    flex: 1;
+    text-align: center;
+    background-color: #8b8383;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.service p {
+    color: #ece5e5;
+    margin-bottom: 10px;
+}
+/*Para imagnes*/
+.service img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    
+}
+
+/* Sección Colaboración */
+
+
+/* Estilos para el formulario de colaboración */
+.colaboracion-container {
+    border: 2px solid #000; /* Grosor y color del borde */
+    padding: 20px; /* Espacio de relleno dentro del borde */
+    background-color: #d69430; /* Color de fondo del contenedor */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.colaboracion h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.colaboracion p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.colaboracion-container form ul {
+    list-style-type: none; /* Elimina los marcadores de lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.colaboracion-container form ul li {
+    list-style-type: none; 
+    margin-bottom: 20px; /* Agrega espacio entre cada elemento del formulario */
+}
+
+.colaboracion-container form ul li label {
+    display: block; /* Hace que las etiquetas ocupen todo el ancho disponible */
+    margin-bottom: 5px; /* Agrega espacio entre las etiquetas y los campos de entrada */
+}
+
+.colaboracion-container form ul li input,
+.colaboracion-container form ul li textarea,
+.colaboracion-container form ul li select {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Ajusta el relleno */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    border: 1px solid #ccc; /* Agrega un borde ligero */
+}
+
+.colaboracion-container form ul li button {
+    list-style-type: none; 
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Ajusta el relleno */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    background-color: #0c61ff; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo */
+}
+
+.colaboracion-container form ul li button:hover {
+    background-color: #0950e0; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.footer {
+    background-color: #66ccff; /* Azul claro */
+    color: #fff; /* Color de texto blanco */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.footer-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: space-between; /* Espacio entre los elementos */
+    max-width: 960px; /* Ajusta el ancho máximo */
+    list-style: none;
+}
+
+.footer-list li {
+    width: 48%; /* Ajusta el ancho de cada elemento */
+}
+
+.contacto,
+.visitanos {
+    margin-bottom: 20px; /* Agregar espacio entre las secciones */
+    text-align: center; /* Centra el contenido */
+}
+
+.contacto input,
+.contacto textarea,
+.contacto button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.contacto textarea {
+    height: 100px; /* Ajusta la altura del campo de texto */
+}
+
+.contacto button {
+    border: none;
+    background-color: #0c61ff; /* Fondo blanco */
+    color: #ffffff; /* Color de texto azul claro */
+    border-radius: 20px; /* Borde redondeado */
+    cursor: pointer;
+}
+
+.visitanos h3 {
+    margin-bottom: 10px;
+}
+
+.redes-sociales a {
+    margin-right: 10px; /* Espacio entre iconos */
+    color: #fff; /* Color de texto blanco */
+}
+
+.redes-sociales a:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último icono */
+}
+
+@media(max-width: 950px) {
+    
+    .header label{
+        display: initial;
+    }
+
+    .header{
+        padding:  20px 10%;
+    }
+
+    .header .navigation{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff; /* Cambia el color de fondo a blanco */
+        display:none;
+    }
+
+    .header .navigation ul li {
+        width: 100%;
+    }
+
+    .header .navigation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+
+    .header .navigation ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+        background: #fff; /* Cambia el color de fondo a blanco */
+    }
+
+    .header .navigation ul li ul li {
+        background-color: #fff; /* Cambia el color de fondo a blanco */
+    }
+    .header .navigation ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left:0;
+    }
+
+
+    #toggle:checked ~ .navigation {
+        display: block;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .mision-vision-valores ul {
+        flex-direction: column; /* Cambia la dirección del flexbox en dispositivos móviles */
+    }
+
+    .mision-vision-valores ul li {
+        width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+        margin-bottom: 20px; /* Agrega espacio entre los elementos en dispositivos móviles */
+    }
+
+    .mision-vision-valores ul li.valores ul li {
+        margin-bottom: 10px; /* Ajusta el espacio entre los elementos en dispositivos móviles */
+    }
+
+    .estructura {
+        padding: 10px; /* Reduce el espacio entre los bordes y el contenido */
+    }
+
+    .estructura .contenido {
+        flex-direction: column; /* Cambia la dirección del contenido a columnas */
+        align-items: center; /* Centra el contenido horizontalmente */
+    }
+
+    .estructura .contenido > div {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 10px 0; /* Añade un poco de espacio entre los contenidos */
+    }
+
+    .footer-list li {
+        width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    }
+}
